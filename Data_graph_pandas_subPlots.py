@@ -15,7 +15,7 @@ plt.style.use('seaborn')
 #==============SQLITE setup/connection =======================================
 
 # creating connection with existing table
-conn = sqlite3.connect('AAA.db')
+conn = sqlite3.connect('test_9.db')
 
 
 
@@ -23,7 +23,7 @@ conn = sqlite3.connect('AAA.db')
 df = pd.read_sql_query('SELECT * FROM SENSOR_TABLE', conn)
 
 # taking column 'time, accel' from database and assigning it onto a variable
-time = df['time']
+time = df['TIME']
 accel_x = df['ACCEL_X']
 accel_y = df['ACCEL_Y']
 accel_z = df['ACCEL_Z']
@@ -37,9 +37,9 @@ fig, (ax1, ax2, ax3) = plt.subplots(nrows = 3 , ncols = 1)
 
 
 # plotting the points and adding artistic stuff
-ax1.plot(time, accel_x, color='b', linewidth = 2, marker = '.', label= 'x-axis')
-ax2.plot(time, accel_y, color='g', linewidth = 2, marker = '.',label = 'y-axis')
-ax3.plot(time, accel_z, color='r', linewidth = 2, marker = '.',label = 'z-axis')
+ax1.plot(time, accel_x, color='b', linewidth = 1, label= 'x-axis')
+ax2.plot(time, accel_y, color='g', linewidth = 1, label = 'y-axis')
+ax3.plot(time, accel_z, color='r', linewidth = 1, label = 'z-axis')
 
 #===========SUBPLOT #1 ====================================================
 
