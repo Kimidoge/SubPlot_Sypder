@@ -33,7 +33,7 @@ fig, (ax1, ax2, ax3) = plt.subplots(nrows = 3 , ncols = 1)
 
 
 
-
+# i added something here
 
 
 # plotting the points and adding artistic stuff
